@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="chatApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body ng-controller="appController">
+    <h1>ChatApp</h1>
+    <form ng-click="post()">
+      <label for="name">Name</label>
+      <input type="text" name="name" ng-model="name" placeholder="Name">
+      <label for="content">Content</label>
+      <input type="textarea" name="content" ng-model="content" placeholder="Content">
+      <br>
+      <input type="button" name="submit" value="Submit">
+    </form>
+  <br>
+  <div ng-repeat="message in messages">
+    <p><b>{{message.name}}:</b> <span> {{message.content}}</span></p>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-route.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  </body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html ng-app="movieSearchApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Movie Search!</title>
+  </head>
+  <body>
+    <h1>Movie Search</h1>
+    <div ng-view></div>
+<div ng-controller="searchController">
+
+  <div ng-controller="searchController">
+    <form>
+      <label for="movieName">Search</label>
+      <input type="text" name="movieName" ng-model="movieName">
+      <button type="submit" ng-click="movieSearch()">Search for Movie</button>
+    </form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-route.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  </body>
+</html> -->
